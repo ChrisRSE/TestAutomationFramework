@@ -17,7 +17,19 @@ namespace TestAutomationFramework.Models.Pages
         {
         }
 
-        public string ErrorMessageContent()
+        internal override bool IsDisplayed()
+        {
+            try
+            {
+                return Driver.FindElement(By.CssSelector(loginButtonSelector)).Displayed;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
+
+        internal string ErrorMessageContent()
         {
             try 
             {
@@ -29,11 +41,11 @@ namespace TestAutomationFramework.Models.Pages
             }
         }
 
-        public void AttemptLogin(string username, string password)
+        internal void AttemptLogin(string username, string password)
         {
             Driver.FindElement(By.CssSelector(usernameFieldSelector)).SendKeys(username);
-            Driver.FindElement(By.Id(passwordFieldSelector)).SendKeys(password);
-            Driver.FindElement(By.Id(loginButtonSelector)).Click();
+            Driver.FindElement(By.CssSelector(passwordFieldSelector)).SendKeys(password);
+            Driver.FindElement(By.CssSelector(loginButtonSelector)).Click();
         }
     }
 }
