@@ -10,6 +10,7 @@ namespace TestAutomationFramework.Models.Pages
     internal class ProductPage : DefaultPage
     {
         private readonly string spanTitleSelector = ".title";
+
         internal ProductPage(IWebDriver driver, int waitTimeInSeconds = 1) : base(driver, waitTimeInSeconds)
         {
         }
