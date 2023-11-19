@@ -1,4 +1,5 @@
 ﻿.vs/
+.Reports/TestReport.html
 bin/
 obj/
 **/nunit_random_seed.tmp
