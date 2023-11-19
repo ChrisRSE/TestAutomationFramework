@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 using TestAutomationFramework.Models.Pages;
+using TestAutomationFramework.Hooks;
 
 namespace YourNamespace.StepDefinitions
 {
@@ -14,7 +15,7 @@ namespace YourNamespace.StepDefinitions
 
         public LoginValidationSteps()
         {
-            driver = new ChromeDriver();
+            driver = WebDriverHooks.GetDriver();
             loginPage = new LoginPage(driver);
         }
 
