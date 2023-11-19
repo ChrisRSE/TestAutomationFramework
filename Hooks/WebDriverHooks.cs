@@ -24,7 +24,7 @@ namespace TestAutomationFramework.Hooks
         {
             if (driver != null)
             {
-                // driver.Quit();
+                driver.Quit();
                 driver = null;
             }
         }
