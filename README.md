@@ -34,7 +34,7 @@ Tests can be ran in different ways depending on preference
 - Directly via Visual Studio Test Explorer.
 - Alternatively, navigate to the project directory and run the command **RunTests.sh**.
 
-## 1.4 Running Tests
+## 1.4 Test Report
 
 Regardless of which way you run the tests, an html report will be saved to the reports folder upon test completion showcasing the results of the test suite.
 
