@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 using TestAutomationFramework.Models.Pages;
 using TestAutomationFramework.Hooks;
@@ -12,11 +11,13 @@ namespace YourNamespace.StepDefinitions
     {
         private readonly IWebDriver driver;
         private readonly LoginPage loginPage;
+        private readonly ScenarioContext _scenarioContext;
 
-        public LoginPageSteps()
+        public LoginPageSteps(ScenarioContext scenarioContext)
         {
             driver = WebDriverHooks.GetDriver();
             loginPage = new LoginPage(driver);
+            _scenarioContext = scenarioContext;
         }
 
         [Given("I am on the login page")]
