@@ -13,6 +13,7 @@ namespace TestAutomationFramework.Models.Pages
         private readonly string passwordFieldSelector = "#password";
         private readonly string loginButtonSelector = "#login-button";
         private readonly string errorMessageSelector = "div.error-message-container > h3";
+
         internal LoginPage(IWebDriver driver, int waitTimeInSeconds = 1) : base(driver, waitTimeInSeconds)
         {
         }
