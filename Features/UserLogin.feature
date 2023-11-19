@@ -1,4 +1,5 @@
-﻿Feature: Validates user login and navigation functionality 
+﻿@UserLogin
+Feature: Validates user login and navigation functionality 
 
 Scenario: Successful login when logging in with a standard user
 	Given I am on the login page
