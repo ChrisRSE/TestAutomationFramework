@@ -38,7 +38,17 @@ Tests can be ran in different ways depending on preference
 
 Regardless of which way you run the tests, an html report will be saved to the reports folder upon test completion showcasing the results of the test suite.
 
-## 1.5 Author
+## 1.5 Design Choices
+
+C# Pick: I chose C# because of its incredible tools like Selenium and SpecFlow, as well as my history and familiarity with the language.
+Automation Tests: Due to testing a website I chose to focus on features and step definitions as my testing of choice, this allowed me to emphasise on the functionality testing and the typical behaviors a user might have. 
+Test Model Patterns: I put a lot of emphasis on having a solid page model in place with supporting hooks. Keeping the features and step definitions clean and concise without duplicate code is really important to me. Additionally it allows me to build on the foundations in future if new page features or complete new pages are required.
+
+Improvements Given More Time:
+Enhanced Reports and Logs: I started off with some basic reporting and logging using extensions, but it's far from perfect. I really want to dive deeper into this—improving the reports so that whenever a test fails, it's crystal clear why and where it went wrong. This would probably be one of my priorities going forward.
+Installation Setup: I would want to implement a script or executable to install all the dependencies for a new user.
+
+## 1.6 Author
 
 Thank you so much for reading this far. 
 
