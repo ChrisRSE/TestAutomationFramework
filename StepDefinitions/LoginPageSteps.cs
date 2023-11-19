@@ -8,12 +8,12 @@ using TestAutomationFramework.Hooks;
 namespace YourNamespace.StepDefinitions
 {
     [Binding]
-    public class LoginValidationSteps
+    public class LoginPageSteps
     {
         private readonly IWebDriver driver;
         private readonly LoginPage loginPage;
 
-        public LoginValidationSteps()
+        public LoginPageSteps()
         {
             driver = WebDriverHooks.GetDriver();
             loginPage = new LoginPage(driver);
