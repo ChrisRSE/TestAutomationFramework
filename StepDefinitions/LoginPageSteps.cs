@@ -40,7 +40,7 @@ namespace YourNamespace.StepDefinitions
         [Then(@"an error message will be displayed containing ""([^""]*)""")]
         public void ThenAnErrorMessageWillBeDisplayedContaining(string errorMessage)
         {
-            Assert.That(loginPage.ErrorMessageContent().Contains(errorMessage));
+            StringAssert.Contains(errorMessage, loginPage.ErrorMessageContent());
         }
     }
 }
