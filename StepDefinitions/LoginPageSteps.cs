@@ -36,5 +36,11 @@ namespace YourNamespace.StepDefinitions
         {
             loginPage.ClickLoginButton();
         }
+
+        [Then(@"an error message will be displayed containing ""([^""]*)""")]
+        public void ThenAnErrorMessageWillBeDisplayedContaining(string errorMessage)
+        {
+            Assert.That(loginPage.ErrorMessageContent().Contains(errorMessage));
+        }
     }
 }
