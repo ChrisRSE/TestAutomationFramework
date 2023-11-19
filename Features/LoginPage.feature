@@ -1,5 +1,7 @@
 ﻿Feature: Login Validation
 
-Scenario: Verify visibility of the login page
-    Given I am on the login page
-    Then I should see that I am on the login page
+Scenario: Login with standard_user
+	Given I am on the login page
+	When I enter username "standard_user" and password "secret_sauce"
+	And I click the login button
+	Then I should be navigated to the product page

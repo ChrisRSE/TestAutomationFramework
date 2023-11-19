@@ -41,10 +41,14 @@ namespace TestAutomationFramework.Models.Pages
             }
         }
 
-        internal void AttemptLogin(string username, string password)
+        internal void EnterUsernameAndPassword(string username, string password)
         {
             Driver.FindElement(By.CssSelector(usernameFieldSelector)).SendKeys(username);
             Driver.FindElement(By.CssSelector(passwordFieldSelector)).SendKeys(password);
+        }
+
+        internal void ClickLoginButton()
+        {
             Driver.FindElement(By.CssSelector(loginButtonSelector)).Click();
         }
     }

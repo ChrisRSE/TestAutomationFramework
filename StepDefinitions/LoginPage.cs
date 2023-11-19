@@ -25,12 +25,16 @@ namespace YourNamespace.StepDefinitions
             loginPage.Open();
         }
 
-        [Then("I should see that I am on the login page")]
-        public void ThenIShouldSeeThatIAmOnTheLoginPage()
+        [When(@"I enter username ""(.*)"" and password ""(.*)""")]
+        public void WhenIEnterUsernameAndPassword(string username, string password)
         {
-            bool isLoginPageDisplayed = loginPage.IsDisplayed();
+            loginPage.EnterUsernameAndPassword(username, password);
+        }
 
-            Assert.IsTrue(isLoginPageDisplayed, "Expected to be on the login page, but it's not.");
+        [When(@"I click the login button")]
+        public void WhenIClickTheLoginButton()
+        {
+            loginPage.ClickLoginButton();
         }
     }
 }
